@@ -2,20 +2,22 @@ function stringAnalyser (string, stringNumber) {
   if (string.length <= stringNumber) {
     return true;
   }
-  return false; }
+  return false;
+}
 
 stringAnalyser ('Привет', 10);
 
+// eslint-disable-next-line no-console
 console.log(stringAnalyser ('Привет', 10));
 
 
 function palindromCheck (palindromString) {
- let isPalindrom = palindromString.replaceAll(' ', '');
- isPalindrom = isPalindrom.toLowerCase();
- let isPalindromAdditional = '';
+  let isPalindrom = palindromString.replaceAll(' ', '');
+  isPalindrom = isPalindrom.toLowerCase();
+  let isPalindromAdditional = '';
 
- for (let i = isPalindrom.length - 1; i >= 0; i--) {
- isPalindromAdditional += isPalindrom[i];
+  for (let i = isPalindrom.length - 1; i >= 0; i--) {
+    isPalindromAdditional += isPalindrom[i];
   }
 
   if (isPalindromAdditional === isPalindrom) {
@@ -23,6 +25,8 @@ function palindromCheck (palindromString) {
   }
   return false;
 }
+
+palindromCheck('Привет как дела');
 
 
 //Функция принимает строку, извлекает содержащиеся в ней цифры от 0 до 9 и возвращает
@@ -38,8 +42,7 @@ function getParseInt (stringCheck) {
     if (Number.isNaN(numberSingle)) {
       // eslint-disable-next-line no-console
       console.log('Это не число');
-    }
-    else {
+    } else {
       numberInsertion += numberSingle.toString();
     }
   }
@@ -47,4 +50,3 @@ function getParseInt (stringCheck) {
 }
 
 getParseInt('fer2 2332');
-
